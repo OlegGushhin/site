@@ -14,10 +14,10 @@ figure{
 
 body{
 	/* Setting the default text color, size, page background and a font stack: */
-	font-size:0.825em;
-	color:#fcfcfc;
-	background-color:#355664;
-	font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.825em;
+    color: #000000;
+    background-color: #f7fdff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Hyperlink Styles: */
@@ -26,10 +26,6 @@ a, a:visited {
 	color:#0196e3;
 	text-decoration:none;
 	outline:none;
-}
-
-a:hover{
-	text-decoration:underline;
 }
 
 a img{
@@ -74,25 +70,13 @@ p{
 .line{
 	/* The dividing line: */
 	height:1px;
-	background-color:#24404c;
-	border-bottom:1px solid #416371;
+	background-color:#000000;
 	margin:1em 0;
 	overflow:hidden;
 }
 
-article .line{
-	/* The dividing line inside of the article is darker: */
-	background-color:#15242a;
-	border-bottom-color:#204656;
-	margin:1.3em 0;
-}
-
-footer .line{
-	margin:2em 0;
-}
-
 nav{
-	background:url(img/gradient_light.jpg) repeat-x 50% 50% #f8f8f8;
+	background-color: #dedede;
 	padding:0 5px;
 	position:absolute;
 	right:0;
@@ -105,7 +89,7 @@ nav{
 	box-shadow:0 1px 1px #333333;
 }
 
-/* The clearfix hack to clear the floats: */
+/* Блок меню */
 
 .clear:after{
 	content: ".";
@@ -115,7 +99,7 @@ nav{
 	visibility: hidden;
 }
 
-/* The navigation styling: */
+/* навигация styling: */
 
 nav ul li{
 	display:inline;
@@ -134,32 +118,18 @@ nav ul li a:visited{
 	text-transform:uppercase;
 }
 
-nav ul li a:hover{
-	text-decoration:none;
-	background-color:#f0f0f0;
-}
-
 nav, article, nav ul li a,figure{
-	/* Applying CSS3 rounded corners: */
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
 }
 
-/* Article styles: */
+/* Статьи styles: */
 
 #page{
 	width:960px;
 	margin:0 auto;
 	position:relative;
-}
-
-article{
-	background-color:#213E4A;
-	margin:3em 0;
-	padding:20px;
-	
-	text-shadow:0 2px 0 black;
 }
 
 figure{
@@ -217,3 +187,42 @@ footer a.by{
 footer a.up{
 	float:right;
 }
+
+
+/* стили для формы */
+#feedback-form{
+    /* background-color: #ececec; */
+    /* margin: 50px auto 0; */
+    /* text-align: center; */
+    width: 430px;
+    /* padding: 15px; */
+		}
+			#feedback-form h2{
+				margin-bottom: 25px;
+			}
+			#feedback-form input[type=text],
+			#feedback-form textarea{
+				background-color: #fff;
+				border: 1px solid #A9A9A9;
+				padding: 1px 5px;
+				width: 90%;
+			}
+			#feedback-form input[type=text]{
+				height: 26px;
+			}
+			#feedback-form textarea{
+				height: 75px;
+				padding-top: 5px;
+			}
+			#feedback-form input[type=submit]{
+				margin-top: 15px;
+				background-color: #213e4a;
+				border: 1px solid #CCCCCC;
+				color: #FFFFFF;
+				font-weight: bold;
+				height: 40px;
+				line-height: 40px;
+				text-transform: uppercase;
+				width: 225px;
+				cursor: pointer;
+			}
