@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Курорты Краснодарского края</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" /> 
+		<script src="js/jquery.min.js"></script>
+    </head>
+    
+    <body>
+    	<p><a name="top"></a></p>
+    	<section id="page">
+            <header> 
+                <hgroup>
+                    <h1>Курорты </h1>
+                    <h3>Краснодарского края</h3>
+                </hgroup>     
+                <nav class="clear">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+						<li><a href="forma.html">Обратная связь</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="articles">
+                <div class="line"></div> 
+                
+                <article id="article1"> 
+                    <p><a name="article1"></a></p>
+					<h2>Обратная связь</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                    
+						<div id="feedback-form">
+							<form action="processor.php" id="feedback" method="post" onsubmit="fsend(); return false;">
+								<p>
+									Введите ФИО:
+								</p>
+								<input name="fio" id="fio" type="text" value="" />
+								<p>
+									Ваша почта:
+								</p>
+								<input name="email" id="email" type="text" value="" />
+								<p>
+									Ваш вопрос:
+								</p>
+								<textarea name="question" id="question" value=""></textarea>
+								<br />
+								<input type="submit" value="отправить" />
+							</form>
+						</div>
+                    </div>
+                </article>
+            </section>
+
+        <footer> 
+           <div class="line"></div>
+          
+        </footer>
+		</section>
+	
+    </body>
+</html>
