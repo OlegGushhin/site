@@ -60,6 +60,30 @@
           
         </footer>
 		</section>
-	
+	<script>
+		// проверка полей формы перед отправкой
+		function fsend(){
+			var value = true;
+			var email = $("#email").val(); // Получаем e-mail пользователя
+			var fio = $("#fio").val(); // Получаем fio пользователя
+			var question = $("#question").val(); // Получаем question пользователя
+			
+			var pattern = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+			if(!pattern.test(email)) {
+			// Действие, если e-mail не корректен
+				alert("Неверно введен email!");
+				return false;
+			} 
+			if (fio =""){
+				alert("Не введено ФИО!");
+				return false;
+			}
+			if (question =""){
+				alert("Не введен вопрос!");
+				return false;
+			}
+			return true;
+		}
+	</script>
     </body>
 </html>
