@@ -34,7 +34,7 @@
                     <div class="articleBody clear">
                     
 						<div id="feedback-form">
-							<form action="processor.php" id="feedback" method="post" onsubmit="fsend(); return false;">
+							<form action="processor.php" id="feedback" method="post" onsubmit="fsend(this); return false;">
 								<p>
 									Введите ФИО:
 								</p>
@@ -62,7 +62,8 @@
 		</section>
 	<script>
 		// проверка полей формы перед отправкой
-		function fsend(){
+		function fsend(e){
+			//alert(2);
 			var value = true;
 			var email = $("#email").val(); // Получаем e-mail пользователя
 			var fio = $("#fio").val(); // Получаем fio пользователя
@@ -72,17 +73,21 @@
 			if(!pattern.test(email)) {
 			// Действие, если e-mail не корректен
 				alert("Неверно введен email!");
-				return false;
+				//return false;
+				value=false;
 			} 
-			if (fio =""){
+			if (fio ==""){
 				alert("Не введено ФИО!");
-				return false;
+				//exit;
+				value=false;
 			}
-			if (question =""){
+			if (question ==""){
 				alert("Не введен вопрос!");
-				return false;
+				value=false;
 			}
-			return true;
+			if (value == true) {
+				e.submit();
+			}
 		}
 	</script>
     </body>
